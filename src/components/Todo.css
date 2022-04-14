@@ -1,0 +1,152 @@
+.todo {
+  background-color: var(--dark-bg);
+  padding: 10px;
+  color: var(--fg);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  animation: slideDown 0.7s;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+}
+
+.deleted {
+  opacity: 0;
+}
+
+.todo-title-card::first-letter {
+  text-transform: capitalize;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  width: fit-content;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 10px;
+  text-align: justify;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: auto;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: var(--dark-bg);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid var(--primary);
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  outline: none;
+  padding: 5px;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--primary);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.delete {
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.delete:hover {
+  transform: scale(1.2);
+}
+
+.edit {
+  background-color: var(--secondary-fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.edit:hover {
+  transform: scale(1.2);
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(6px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  65% {
+    transform: translateY(-4%);
+  }
+  80% {
+    transform: translateY(4%);
+  }
+  95% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: var(--secondary-fg);
+  text-decoration-thickness: 2px;
+  animation: shake 600ms;
+}
+
+@media only screen and (max-width: 600px) {
+  .todo-title-card {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,20 @@
+.todos-list {
+  width: 50%;
+  height: auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todos-list-title {
+  color: var(--dark-fg);
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .todos-list {
+    width: 100%;
+    padding-top: 40px;
+  }
+}

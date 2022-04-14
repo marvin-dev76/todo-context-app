@@ -1,0 +1,38 @@
+.title {
+  color: var(--fg);
+}
+
+.logo {
+  font-size: 1.2rem;
+  color: var(--fg);
+}
+
+.theme {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.theme:hover {
+  transform: scale(1.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo-container {
+  width: max-content;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+

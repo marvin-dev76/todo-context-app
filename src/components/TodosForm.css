@@ -1,0 +1,123 @@
+.todo-form {
+  padding-top: 20px;
+  width: 50%;
+}
+
+.todo-form-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  gap: 20px;
+}
+
+h1 {
+  color: var(--fg);
+}
+
+.todo-title {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid var(--fg);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+label {
+  color: var(--primary);
+}
+
+::placeholder {
+  color: var(--dark-fg);
+  opacity: 1;
+}
+
+.add-btn {
+  font-size: 1rem;
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  color: var(--bg);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: transform 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.edit-btn {
+  font-size: 1rem;
+  background-color: var(--bg);
+  outline: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.cancel-btn {
+  font-size: 1rem;
+  background-color: var(--dark-fg);
+  outline: none;
+  color: var(--bg);
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: transform 0.2s ease;
+}
+
+.cancel-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.complete-btn {
+  font-size: 1rem;
+  background-color: var(--secondary-fg);
+  outline: none;
+  color: var(--bg);
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: transform 0.2s ease;
+}
+
+.complete-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .todo-form {
+    width: 100%;
+  }
+}

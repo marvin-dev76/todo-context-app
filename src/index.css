@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto";
+}
+
+.dark {
+  --bg: #06090D;
+  --dark-bg: #0a0e15;
+  --secondary-bg: #101823;
+  --fg: #A7BCA9;
+  --secondary-fg: #164D47;
+  --dark-fg: #748376;
+  --primary: #216959;
+}
+
+.light {
+  --bg: #A7BCA9;
+  --dark-bg: #85a288;
+  --secondary-bg: #7a9a7d;
+  --fg: #06090D;
+  --secondary-fg: #164D47;
+  --dark-fg: #0a0e15;
+  --primary: #216959;
+}
+
+.background {
+  background-color: var(--bg);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1300px;
+  width: 85%;
+  background-color: var(--bg);
+  margin: 0px auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
 }

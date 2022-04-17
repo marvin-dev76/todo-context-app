@@ -62,7 +62,7 @@ const TodosForm = () => {
 
   return (
     <div className="todo-form">
-      <h1>What&apos;s up, Marbin! 👋</h1>
+      <h1>What&apos;s up! 👋</h1>
       <form className="todo-form-container">
         <label>
           {selectedTodo ? "Add new TO-DO title" : "Add TO-DO title:"}{" "}
